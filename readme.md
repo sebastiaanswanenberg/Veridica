@@ -18,20 +18,65 @@ It includes:
 
 ## Installation
 
+You can install the package via **PyPI** or from **source**.
+
+### Install from PyPI
+
 ```bash
-poetry add veridica
+pip install veridica
+
+```
+
+### Install from Source (GitHub)
+
+```bash
+git clone https://github.com/sebastiaanswanenberg/veridica.git
+cd veridica
+pip install .
 ```
 
 ## Usage
+
+After installation, you can use `veridica` to compare strings one to one or compare a string to a set.
+
+### Example: Comparing strings one-to-one.
+
+```python
+from veridica.similarity import levenshtein
+
+```
+
+### Example: Comparing string to a set of strings.
+
+```python
+from veridica.similarity import levenshtein
+from veridica.batch import compare_many
+
+
+```
+
+### Example: Time your string to set calculations.
 
 ```python
 from veridica.similarity import levenshtein
 from veridica.batch import compare_many
 from veridica.timing import timed
 
-#todo: Create example implementation and example returns.
-
-
-
-
 ```
+
+## Testing
+
+This project includes a test suite. You can run tests using `pytest`:
+
+```bash
+pip install pytest
+pytest tests
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues if you have any suggestions or find bugs.
