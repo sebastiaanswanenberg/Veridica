@@ -19,8 +19,8 @@ def timed(func: Callable) -> Callable:
     @wraps(func)
     def wrapper(*args, **kwargs) -> tuple[Any, float]:
         start = time.perf_counter()
-        result = func(*args, **kwargs)
         end = time.perf_counter()
         elapsed = end - start
-        return result, elapsed
+        result = func(*args, **kwargs)
+        return elapsed, result
     return wrapper
