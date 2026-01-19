@@ -3,3 +3,10 @@ __pycache__/
 *.pkl
 dist/
 build/
+.vscode/
+./.vscode/*
+.venv/
+.venv/*
+.pytest_cache/
+./vscode/
+.env

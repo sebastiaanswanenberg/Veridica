@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 
+
 def levenshtein_distance(s1: str, s2: str) -> int:
     """Calculate the levenstein distance between two strings"""
 
@@ -27,6 +28,7 @@ def levenshtein_distance(s1: str, s2: str) -> int:
 
     return cur[-1]
 
+
 def jaccard_distance(s1: str, s2: str) -> float:
     """Calculate the Jaccard distance between two strings."""
     # split on whitespace into token sets
@@ -46,6 +48,7 @@ def jaccard_distance(s1: str, s2: str) -> float:
 
     return 1.0 - (len(intersection) / len(union))
 
+
 def hamming_distance(s1: str, s2: str) -> float:
     """Calculate the Hamming distance between two strings."""
     # ensure length of s1 >= s2
@@ -59,6 +62,7 @@ def hamming_distance(s1: str, s2: str) -> float:
             distance += 1
 
     return distance
+
 
 def damerau_levenshtein_distance(s1: str, s2: str) -> int:
     """Calculate the Damerau-Levenshtein distance between two strings."""
